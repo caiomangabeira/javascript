@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do toque</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            background-color: rgb(168, 168, 168);
+        }
+
+        main {
+            margin: auto;
+        }
+
+        header {
+            background-color: gray;
+            text-align: center;
+            padding: 20px;
+        }
+
+        div {
+            display: inline-block;
+            height: 150px;
+            width: 150px;
+            background-color: darkred;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jogo do Toque</h1>
+        <p>Você deve passar o mouse do canto superior esquerdo até o canto inferior direito da tela sem tocar nos quadros</p>
+    </header>
+    <main>
+        <div class="quadrado" onmouseenter="entrou()">
+
+        </div>
+        <div class="quadrado" onmouseenter="entrou()">
+
+        </div>
+        <div class="quadrado" onmouseenter="entrou()">
+
+        </div> <br>
+        <div class="quadrado" onmouseenter="entrou()">
+
+        </div>
+        <div class="quadrado" onmouseenter="entrou()">
+
+        </div>
+        <div class="quadrado" onmouseenter="entrou()">
+        
+        </div> <br>
+        <div class="quadrado" onmouseenter="entrou()">
+
+        </div>
+        <div class="quadrado" onmouseenter="entrou()">
+
+        </div>
+        <div class="quadrado" onmouseenter="entrou()">
+        
+        </div>
+    </main>
+
+    <script>
+        function entrou() {
+            var m = window.document.getElementsByTagName('main')[0]
+            m.style.marginTop = '100px'
+            m.style.background = 'darkred'
+            m.style.width = '300px'
+            m.style.height = '300px'
+            m.innerHTML = 'PERDEU!'
+            m.style.lineHeight = '300px'
+            m.style.color = 'white'
+            m.style.textAlign = 'center'
+            m.style.fontSize = '3em'
+        }
+    </script>
+</body>
+</html>
